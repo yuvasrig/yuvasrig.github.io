@@ -222,8 +222,11 @@ nav {
 
 /* EDUCATION */
 .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-.edu-card { border: 1px solid var(--border); padding: 1.5rem 1.5rem 1.5rem 1.8rem; position: relative; }
-.edu-card::before { content: ''; position: absolute; top: 0; left: 0; bottom: 0; width: 3px; background: var(--border); }
+.edu-card { border: 1px solid var(--border); position: relative; overflow: hidden; background: var(--bg); }
+.edu-card::before { content: ''; position: absolute; top: 0; left: 0; bottom: 0; width: 3px; background: var(--border); z-index: 1; }
+.edu-photo-wrap { border-bottom: 1px solid var(--border); background: var(--bg2); }
+.edu-photo { width: 100%; height: 220px; object-fit: cover; object-position: center; display: block; }
+.edu-body { padding: 1.5rem 1.5rem 1.5rem 1.8rem; }
 .edu-deg { font-family: var(--serif); font-size: 1.05rem; color: var(--ink); margin-bottom: 0.35rem; }
 .edu-school { font-size: 0.88rem; color: var(--muted); margin-bottom: 0.3rem; }
 .edu-meta { font-family: var(--mono); font-size: 0.72rem; color: var(--muted); letter-spacing: 0.03em; }
@@ -738,14 +741,24 @@ footer { padding: 4rem; text-align: center; border-top: 1px solid var(--border);
 <div class="sec-head"><span class="sec-num">05 /</span><h2 class="sec-title">Education</h2></div>
 <div class="edu-grid">
 <div class="edu-card">
+<div class="edu-photo-wrap">
+<img alt="University of Washington campus Quad in spring" class="edu-photo" src="https://uw-s3-cdn.s3.us-west-2.amazonaws.com/wp-content/uploads/sites/43/2025/03/27093558/20240319_Cherry-Blossom-Aerial_027-X2-375x281.jpg"/>
+</div>
+<div class="edu-body">
 <div class="edu-deg">MS, Information Systems</div>
 <div class="edu-school">University of Washington · Michael G. Foster School of Business</div>
 <div class="edu-meta">GPA 3.88 · Expected June 2026 · Student Ambassador</div>
 </div>
+</div>
 <div class="edu-card">
+<div class="edu-photo-wrap">
+<img alt="Government College of Technology Coimbatore main building" class="edu-photo" src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Government_College_of_Technology_Coimbatore.jpg"/>
+</div>
+<div class="edu-body">
 <div class="edu-deg">BTech, Information Technology</div>
 <div class="edu-school">Government College of Technology · Coimbatore, India</div>
 <div class="edu-meta">GPA 8.15 / 10 · May 2011</div>
+</div>
 </div>
 </div>
 </section>
